@@ -9,17 +9,19 @@
 </head>
 <body>
 
-<div class="navbar-fixed-top">
-  <div class="top-v1">
-    <%= render 'layouts/header_top' %>
+<div class="localscroll">
+  <div id="mainHeader" class="navbar-fixed-top">
+    <div class="top-v1">
+      <%= render 'layouts/header_top' %>
+    </div>
+    <header class="header" style="display:block;background-color:#fff;">
+      <%= render 'layouts/header_navigation' %>
+    </header>
   </div>
-  <header class="header" style="display:block;background-color:#fff;">
-    <%= render 'layouts/header_navigation' %>
-  </header>
-</div>
 
-<div class="one-page" style="margin-top:110px;">
-  <%= yield %>
+  <div class="one-page" style="margin-top:110px;">
+    <%= yield %>
+  </div>
 </div>
 
 <div id="topcontrol">

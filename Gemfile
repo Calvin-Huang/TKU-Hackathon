@@ -34,6 +34,7 @@ end
 
 gem 'awesome_nested_fields'
 gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

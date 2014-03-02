@@ -16,3 +16,10 @@ marker = map.addMarker({
   title: '淡江大學'
 })
 
+if $('.localscroll').length
+  $('.localscroll').localScroll({
+    lazy: true,
+    offset: {
+      top: - ($('#mainHeader').height() - 1)
+    }
+  });

@@ -15,6 +15,7 @@
 //= require unify/jquery/jquery-migrate.min
 //= require unify/jquery/jquery-ui.min
 //= require jquery_ujs
+//= require jquery.nested-fields.min
 //= require unify/bootstrap/bootstrap.min
 //= require unify/plugins/plugins
 //= require turbolinks

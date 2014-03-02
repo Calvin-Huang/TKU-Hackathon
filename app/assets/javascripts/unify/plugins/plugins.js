@@ -32,4 +32,6 @@
 //= require unify/plugins/bootstrap_maxlength/bootstrap-maxlength.min.js
 //= require unify/plugins/bootstrap_switch/bootstrapSwitch.min.js
 //= require unify/plugins/back-to-top/back-to-top.js
+//= require unify/plugins/scrollto/jquery.scrollTo.min.js
+//= require unify/plugins/localscroll/jquery.localScroll-min.js
 //= require unify/plugins/stellar/jquery.stellar.js

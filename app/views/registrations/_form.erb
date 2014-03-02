@@ -1,0 +1,37 @@
+<%= form_for(@registration, html: { class: 'form-horizontal validate-form' }) do |f| %>
+  <h4>團隊資訊</h4>
+  <div class="form-group">
+    <div class="col-lg-12 controls">
+      <%= f.text_field :team_name, class: 'form-control', placeholder: '請輸入團隊名稱', data: { 'rule-required' => true } %>
+    </div>
+  </div>
+  <h4>團隊成員<a href="#" class="add btn-u btn pull-right">增加成員</a></h4>
+  <div class="items">
+    <%= f.nested_fields_for :members do |nf| %>
+      <div class="form-group">
+        <%= nf.label :name, '成員', class: 'col-lg-2 control-label' %>
+        <div class="col-lg-9 controls">
+          <%= nf.text_field :name, class: 'form-control', placeholder: '請輸入姓名', data: { 'rule-required' => true } %>
+        </div>
+        <div class="col-lg-1">
+          <a href="#" class="remove pull-right"><i class="icon-remove"></i></a>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-9 col-lg-offset-2 controls">
+          <%= nf.phone_field :phone, class: 'form-control', placeholder: '請輸入聯絡電話', data: { 'rule-required' => true, 'rule-phoneNL' => true } %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-9 col-lg-offset-2 controls">
+          <%= nf.email_field :email, class: 'form-control', placeholder: '請輸入電子信箱', data: { 'rule-required' => true, 'rule-email' => true } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-10 col-lg-offset-2">
+      <%= f.button '送出報名', class: 'btn-u btn-xs pull-right' %>
+    </div>
+  </div>
+<% end %>

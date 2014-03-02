@@ -1,8 +1,10 @@
 Hackathon2014::Application.routes.draw do
+  devise_for :admins
   root to: 'event#show'
 
   resource :event
   resources :registrations
+  resources :managements
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,12 +1,8 @@
 class EventController < ApplicationController
   # GET /event
   def show
-
-  end
-
-  # GET /event/new
-  def new
-
+    @registration = Registration.new
+    @registration.members.build
   end
 
   # GET /event/edit

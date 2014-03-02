@@ -61,6 +61,7 @@ $(document).on 'page:change', ->
   setMaxLength()
   setValidateForm()
   setStellar()
+  setLocalScroll()
 
   # --------------------------------------------------------------------------------------------------------------------
   # removes .box after click on .box-remove button
@@ -307,3 +308,7 @@ $(document).on 'page:change', ->
       horizontalScrolling: false,
       responsive:true
     })
+
+@setLocalScroll = () ->
+  if jQuery().localScroll
+    $.localScroll()

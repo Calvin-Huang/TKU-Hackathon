@@ -14,24 +14,24 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div style="height: 1px;" class="navbar-collapse navbar-responsive-collapse collapse" id="scrollTarget">
+    <div style="height: 1px;" class="navbar-collapse navbar-responsive-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to('#') do %>
+          <%= link_to(root_path(anchor: 'main')) do %>
             <i class="glyphicon glyphicon-home"></i>
           <% end %>
         </li>
         <li>
-          <%= link_to '活動介紹', '#introduce' %>
+          <%= link_to '活動介紹', root_path(anchor: 'introduce') %>
         </li>
         <li>
-          <%= link_to '活動說明', '#illustrate' %>
+          <%= link_to '活動說明', root_path(anchor: 'illustrate') %>
         </li>
         <li>
-          <%= link_to '時間地點', '#information' %>
+          <%= link_to '時間地點', root_path(anchor: 'information') %>
         </li>
         <li>
-          <%= link_to '報名申請', new_registration_path %>
+          <%= link_to '報名參加', root_path(anchor: 'registration') %>
         </li>
       </ul>
     </div><!-- /navbar-collapse -->

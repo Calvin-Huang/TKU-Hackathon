@@ -1,0 +1,54 @@
+<div class="one-page-inner">
+  <div class="container">
+    <%= link_to '登出', destroy_admin_session_path, method: :delete, class: 'btn btn-u pull-right' %>
+    <div class="panel panel-green margin-bottom-40">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="icon-tasks"></i>
+          報名繳費狀況
+        </h3>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>隊伍名稱</th>
+            <th>成員資訊</th>
+            <th>繳費狀況</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @registrations.each do |registration| %>
+          <tr>
+            <td>
+              <%= registration.team_name %>
+            </td>
+            <td>
+              <% if registration.members.any? %>
+                <dl class="dl-horizontal">
+                  <% registration.members.each do |member| %>
+                    <dt>
+                      <%= member.name %>
+                    </dt>
+                    <dd>
+                      <%= member.phone %>、<%= member.email %>
+                    </dd>
+                  <% end %>
+                </dl>
+              <% end %>
+            </td>
+            <td>
+              <% if registration.paid? %>
+                <span class="label label-success">
+                  已收款
+                </span>
+              <% else %>
+                <%= link_to '確認收款', management_path(registration, paid: true), class: 'btn btn-u btn-u-blue', method: :put %>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
