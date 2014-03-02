@@ -7,7 +7,12 @@
 map = new GMaps({
   div: '#map',
   lat: 25.173848,
-  lng: 121.447575
+  lng: 121.447575,
+  options: {
+    draggable: false,
+    disableDoubleClickZoom: true,
+    scrollwheel: false
+  }
 })
 
 marker = map.addMarker({
@@ -23,3 +28,8 @@ if $('.localscroll').length
       top: - ($('#mainHeader').height() - 1)
     }
   });
+
+if location.hash && $(location.hash).length > 0
+  $('html, body').animate({
+    scrollTop: $(location.hash).offset().top - $('#mainHeader').height() + 1
+  }, 300)
