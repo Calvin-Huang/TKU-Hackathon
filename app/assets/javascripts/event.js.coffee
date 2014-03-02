@@ -4,22 +4,22 @@
 
 #= require unify/plugins/gmap/gmap.js
 
-map = new GMaps({
-  div: '#map',
-  lat: 25.173848,
-  lng: 121.447575,
-  options: {
-    draggable: false,
-    disableDoubleClickZoom: true,
-    scrollwheel: false
-  }
-})
-
-marker = map.addMarker({
-  lat: 25.173848,
-  lng: 121.447575
-  title: '淡江大學'
-})
+if ($('#map').length > 0)
+  map = new GMaps({
+    div: '#map',
+    lat: 25.173848,
+    lng: 121.447575,
+    options: {
+      draggable: false,
+      disableDoubleClickZoom: true,
+      scrollwheel: false
+    }
+  })
+  marker = map.addMarker({
+    lat: 25.173848,
+    lng: 121.447575
+    title: '淡江大學'
+  })
 
 if $('.localscroll').length
   $('.localscroll').localScroll({
