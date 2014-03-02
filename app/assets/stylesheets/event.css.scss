@@ -5,8 +5,9 @@
 
 #paralax-slice {
   min-height: 0;
-  background-image: image_url('hackathon.jpg');
+  background: image_url('hackathon.jpg') 50% 0 no-repeat fixed;
   background-size: cover;
+  color: white;
 }
 
 #paralax-slice a.one-page-btn {
