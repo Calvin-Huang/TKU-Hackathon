@@ -35,6 +35,11 @@ class RegistrationsController < ApplicationController
 
     respond_to do |format|
       if @registration.save
+        if @registration.members.any?
+          @registration.members.each do |member|
+            RemindMailer.content(member.email, member.name).deliver
+          end
+        end
         format.html { redirect_to registration_path(@registration), notice: '報名成功' }
         format.json { render action: :show, status: :created, location: @registration }
       else
