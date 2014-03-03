@@ -35,7 +35,7 @@
         <h1 style="color:#fff;">TKU Hackathon<br/>是一個很棒的機會</h1>
       </div>
       <div class="col-md-4">
-        <%= link_to(new_registration_path, class: 'btn btn-u btn-u-red btn-block one-page-btn') do %>
+        <%= link_to(root_path(anchor: 'registration'), class: 'btn btn-u btn-u-red btn-block one-page-btn') do %>
           <i class="icon-ok"></i>
           <span style="margin-left:10px;">現在就報名參加</span>
         <% end %>
@@ -125,9 +125,6 @@
   <div class="container">
     <h2 class="one-page-header">時間地點</h2>
   </div>
-  <!-- Google Map -->
-  <div id="map" class="map margin-bottom-40"></div>
-  <!---/map-->
   <div class="container">
     <div class="row">
       <div class="col-md-12 one-page-content">
@@ -139,6 +136,9 @@
       </div>
     </div>
   </div>
+  <!-- Google Map -->
+  <div id="map" class="map margin-bottom-40"></div>
+  <!---/map-->
 </div>
 
 <div class="one-page-inner one-default" id="registration">
@@ -159,6 +159,8 @@
           因此<strong class="color-red">保證金將于活動結束後全數退還</strong>
         </p>
         <h4 class="color-red">活動保證金額為500元</h4>
+        <br/>
+        <h4 class="color-red">報名資訊將用於替各位申請學生活動險<br/>除此之外將不會使用在其他用途</h4>
       </div>
       <div class="col-md-6 reg-page">
         <%= render 'registrations/form' %>

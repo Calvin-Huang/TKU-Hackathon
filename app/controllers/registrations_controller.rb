@@ -63,7 +63,7 @@ class RegistrationsController < ApplicationController
 
   private
     def registration_params
-      params.require(:registration).permit(:team_name, members_attributes: [ :name, :phone, :email ]).merge(paid: false)
+      params.require(:registration).permit(:team_name, members_attributes: [ :name, :phone, :email, :identity, :birthday ]).merge(paid: false)
     end
 
     def set_registration
