@@ -33,3 +33,5 @@ if location.hash && $(location.hash).length > 0
   $('html, body').animate({
     scrollTop: $(location.hash).offset().top - $('#mainHeader').height() + 1
   }, 300)
+
+$('#paralax-welcome').stellar()
