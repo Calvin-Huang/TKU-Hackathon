@@ -19,3 +19,4 @@
 /config/initializers/omniauth.rb
 /config/initializers/devise.rb
 /.idea
+.DS_Store
